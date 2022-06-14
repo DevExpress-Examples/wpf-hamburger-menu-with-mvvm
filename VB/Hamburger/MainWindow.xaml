@@ -7,17 +7,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hamburger"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525"
+        xmlns:templateSelector="clr-namespace:Hamburger.TemplateSelectors">
     <Window.DataContext>
         <ViewModel:MainViewModel/>
     </Window.DataContext>
     <Window.Resources>
-        <DataTemplate x:Key="HamburgerMenuItemTemplate" DataType="{x:Type ViewModel:MainViewModel}">
+        <DataTemplate x:Key="HamburgerMenuItemTemplate" DataType="{x:Type ViewModel:HamburgerMenuItemViewModel}">
             <dxwui:HamburgerMenuNavigationButton Content="{Binding Caption}" NavigationTargetTypeName="{Binding PageName}" />
+        </DataTemplate>
+        <DataTemplate x:Key="HamburgerSubMenuItemTemplate" DataType="{x:Type ViewModel:HamburgerSubMenuItemViewModel}">
+            <dxwui:HamburgerSubMenuNavigationButton Content="{Binding Caption}" NavigationTargetTypeName="{Binding PageName}"/>
         </DataTemplate>
     </Window.Resources>
     <dxwui:HamburgerMenu IsMenuVisible="{Binding IsMenuVisible}" ItemsSource="{Binding Items}" AllowBuiltInNavigation="True"
-                         SelectedItem="{Binding SelectedItem, Mode=TwoWay}" ItemTemplate="{StaticResource HamburgerMenuItemTemplate}" >
+                         SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
+        <dxwui:HamburgerMenu.ItemTemplateSelector>
+            <templateSelector:HamburgerMenuItemTemplateSelector ItemTemplate="{StaticResource HamburgerMenuItemTemplate}">
+                <templateSelector:HamburgerMenuItemTemplateSelector.SubItemTemplate>
+                    <DataTemplate>
+                        <dxwui:HamburgerSubMenu Content="{Binding Caption}" ItemsSource="{Binding SubItems}" MoreButtonVisibilityMode="Hidden" ItemTemplate="{StaticResource HamburgerSubMenuItemTemplate}" />
+                    </DataTemplate>
+                </templateSelector:HamburgerMenuItemTemplateSelector.SubItemTemplate>
+            </templateSelector:HamburgerMenuItemTemplateSelector>
+        </dxwui:HamburgerMenu.ItemTemplateSelector>
+        <!--<dxwui:HamburgerSubMenu ItemsSource="{Binding SubItems}" ItemTemplate="{StaticResource HamburgerSubMenuItemTemplate}"/>-->
     </dxwui:HamburgerMenu>
 
 </Window>

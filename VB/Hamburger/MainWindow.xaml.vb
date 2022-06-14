@@ -1,11 +1,12 @@
-﻿Imports System.Windows
+Imports System.Windows
 
 Namespace Hamburger
-	Partial Public Class MainWindow
-		Inherits Window
 
-		Public Sub New()
-			InitializeComponent()
-		End Sub
-	End Class
+    Public Partial Class MainWindow
+        Inherits Window
+
+        Public Sub New()
+            Me.InitializeComponent()
+        End Sub
+    End Class
 End Namespace
