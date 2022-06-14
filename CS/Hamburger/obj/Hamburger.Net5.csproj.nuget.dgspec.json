@@ -1,0 +1,104 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\sameishchev.anton\\Downloads\\hamburger-menu-mvvm-t568811-21.1.5-\\CS - Copy\\Hamburger\\Hamburger.Net5.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\sameishchev.anton\\Downloads\\hamburger-menu-mvvm-t568811-21.1.5-\\CS - Copy\\Hamburger\\Hamburger.Net5.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sameishchev.anton\\Downloads\\hamburger-menu-mvvm-t568811-21.1.5-\\CS - Copy\\Hamburger\\Hamburger.Net5.csproj",
+        "projectName": "Hamburger",
+        "projectPath": "C:\\Users\\sameishchev.anton\\Downloads\\hamburger-menu-mvvm-t568811-21.1.5-\\CS - Copy\\Hamburger\\Hamburger.Net5.csproj",
+        "packagesPath": "C:\\Users\\sameishchev.anton\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sameishchev.anton\\Downloads\\hamburger-menu-mvvm-t568811-21.1.5-\\CS - Copy\\Hamburger\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\sameishchev.anton\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/q98uZuFIlJoSXdXQuSUvvn78ZHzZp1mPfjsQ7FTqDKXOJSlwaO/api": {}
+        },
+        "frameworks": {
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "DevExpress.Data": {
+              "target": "Package",
+              "version": "[21.2.*-*, )"
+            },
+            "DevExpress.Data.Desktop": {
+              "target": "Package",
+              "version": "[21.2.*-*, )"
+            },
+            "DevExpress.Mvvm": {
+              "target": "Package",
+              "version": "[21.2.*-*, )"
+            },
+            "DevExpress.Printing.Core": {
+              "target": "Package",
+              "version": "[21.2.*-*, )"
+            },
+            "DevExpress.Wpf.Controls": {
+              "target": "Package",
+              "version": "[21.2.*-*, )"
+            },
+            "DevExpress.Wpf.Core": {
+              "target": "Package",
+              "version": "[21.2.*-*, )"
+            },
+            "DevExpress.Wpf.Themes.All": {
+              "target": "Package",
+              "version": "[21.2.*-*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+<Window xmlns:dxwui="http://schemas.devexpress.com/winfx/2008/xaml/windowsui"  x:Class="Hamburger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:ViewModel="clr-namespace:Hamburger.ViewModel"
+        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hamburger"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525"
+        xmlns:templateSelector="clr-namespace:Hamburger.TemplateSelectors">
+    <Window.DataContext>
+        <ViewModel:MainViewModel/>
+    </Window.DataContext>
+    <Window.Resources>
+        <DataTemplate x:Key="HamburgerMenuItemTemplate" DataType="{x:Type ViewModel:HamburgerMenuItemViewModel}">
+            <dxwui:HamburgerMenuNavigationButton Content="{Binding Caption}" NavigationTargetTypeName="{Binding PageName}" />
+        </DataTemplate>
+        <DataTemplate x:Key="HamburgerSubMenuItemTemplate" DataType="{x:Type ViewModel:HamburgerSubMenuItemViewModel}">
+            <dxwui:HamburgerSubMenuNavigationButton Content="{Binding Caption}" NavigationTargetTypeName="{Binding PageName}"/>
+        </DataTemplate>
+    </Window.Resources>
+    <dxwui:HamburgerMenu IsMenuVisible="{Binding IsMenuVisible}" ItemsSource="{Binding Items}" AllowBuiltInNavigation="True"
+                         SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
+        <dxwui:HamburgerMenu.ItemTemplateSelector>
+            <templateSelector:HamburgerMenuItemTemplateSelector ItemTemplate="{StaticResource HamburgerMenuItemTemplate}">
+                <templateSelector:HamburgerMenuItemTemplateSelector.SubItemTemplate>
+                    <DataTemplate>
+                        <dxwui:HamburgerSubMenu Content="{Binding Caption}" ItemsSource="{Binding SubItems}" MoreButtonVisibilityMode="Hidden" ItemTemplate="{StaticResource HamburgerSubMenuItemTemplate}" />
+                    </DataTemplate>
+                </templateSelector:HamburgerMenuItemTemplateSelector.SubItemTemplate>
+            </templateSelector:HamburgerMenuItemTemplateSelector>
+        </dxwui:HamburgerMenu.ItemTemplateSelector>
+        <!--<dxwui:HamburgerSubMenu ItemsSource="{Binding SubItems}" ItemTemplate="{StaticResource HamburgerSubMenuItemTemplate}"/>-->
+    </dxwui:HamburgerMenu>
+
+</Window>
