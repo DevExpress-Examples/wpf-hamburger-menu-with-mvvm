@@ -1,11 +1,12 @@
-﻿Imports DevExpress.Xpf.WindowsUI
+Imports DevExpress.Xpf.WindowsUI
 
 Namespace Hamburger
-    Partial Public Class SimplePage
+
+    Public Partial Class SimplePage
         Inherits NavigationPage
 
         Public Sub New()
-            InitializeComponent()
+            Me.InitializeComponent()
         End Sub
     End Class
 End Namespace
