@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# Create a Hamburger Menu with the MVVM Pattern
+# Create a Hamburger Menu that Navigates Between the MVVM Views
 This example creates an application that uses the Hamburger Menu for navigation based on the MVVM design pattern.
 
 ![image](https://user-images.githubusercontent.com/12169834/183658818-87fc8254-04a9-4b67-844e-f84f7473aeb6.png)
