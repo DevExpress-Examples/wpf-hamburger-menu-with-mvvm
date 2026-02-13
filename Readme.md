@@ -25,7 +25,7 @@ This example creates an application that uses the WPF Hamburger Menu Control to 
 ## Documentation 
 * [Hamburger Menu](https://docs.devexpress.com/WPF/119536/controls-and-libraries/windows-modern-ui/hamburger-menu)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-hamburger-menu-with-mvvm&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-hamburger-menu-with-mvvm&~~~was_helpful=no)
 
